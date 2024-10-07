@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mothercon"
+    android:background="@drawable/felixmoon"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".Home">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/head">
+
+        <androidx.appcompat.widget.Toolbar android:layout_height="56dp"
+            android:layout_width="match_parent"
+            android:id="@+id/toolbar"
+            android:background="@android:color/transparent"/>
+
+        <SearchView
+            android:id="@+id/searchbar"
+            android:layout_width="270dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginBottom="7dp"
+            android:queryHint="Search for episodes, movies and series"
+            android:theme="@style/Theme.Design.Light"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/searchcss">
+            <requestFocus/>
+        </SearchView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:translationZ="100dp"
+        android:id="@+id/shead"
+        android:clickable="true"
+        android:background="@drawable/listbg"
+        android:layout_below="@+id/head">
+
+        <ProgressBar
+            android:id="@+id/sBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/progresscss"
+            android:translationZ="130dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/emptylistmsg"
+            android:layout_centerInParent="true"
+            android:paddingTop="60dp"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:text=""
+            android:translationZ="130dp"
+            android:textAlignment="center"
+            />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/refreshbtn"
+            android:background="@drawable/ic_refresh"
+            android:layout_below="@+id/emptylistmsg"
+            android:layout_marginTop="20dp"
+            />
+
+
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:id="@+id/clearbtn"
+            android:text="Clear"
+            android:textColor="#fff"
+            android:layout_alignParentEnd="true"
+            android:textAllCaps="false"
+            android:background="#0A162C"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:text="separator"
+            android:id="@+id/csep"
+            android:layout_alignBottom="@+id/clearbtn"
+            android:background="#32000000"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/searchwindow"
+            android:layout_below="@+id/csep"
+            android:background="@drawable/listbg"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/listbg"
+            android:id="@+id/annexlayout"
+            android:translationZ="90dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradientbg"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:id="@+id/annextitletxt"
+                android:textAllCaps="false"
+                android:paddingTop="3dp"
+                android:textStyle="bold"
+                android:paddingBottom="3dp"
+                />
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:id="@+id/annexbackbtn"
+                android:text="Back"
+                android:textColor="#fff"
+                android:layout_alignParentEnd="true"
+                android:textAllCaps="false"
+                android:layout_below="@+id/annextitletxt"
+                android:background="#0A162C"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:text="separator"
+                android:id="@+id/sep"
+                android:layout_alignBottom="@+id/annexbackbtn"
+                android:background="#32000000"/>
+
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/searchannex"
+                android:background="@drawable/listbg"
+                android:layout_below="@+id/sep"
+                />
+
+            <ProgressBar
+                android:id="@+id/sBarannex"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:indeterminateDrawable="@drawable/progresscss"
+                android:translationZ="130dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/emptytextannex"
+                android:background="#25FFFFFF"
+                android:textColor="#fff"
+                android:textSize="16sp"/>
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/refreshbtnannex"
+                android:background="@drawable/ic_refresh"
+                android:layout_below="@+id/emptytextannex"
+                android:layout_marginTop="20dp"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/listbg"
+            android:id="@+id/epilayout"
+            android:translationZ="150dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradientbg"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:id="@+id/episodestitletxt"
+                android:textAllCaps="false"
+                android:paddingTop="3dp"
+                android:textStyle="bold"
+                android:paddingBottom="3dp"
+                />
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:id="@+id/episodesbackbtn"
+                android:text="Back"
+                android:textColor="#fff"
+                android:layout_alignParentEnd="true"
+                android:textAllCaps="false"
+                android:layout_below="@+id/episodestitletxt"
+                android:background="#0A162C"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:text="separator"
+                android:id="@+id/separator"
+                android:layout_alignBottom="@+id/episodesbackbtn"
+                android:background="#32000000"/>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/searchannexepisodes"
+                android:background="@drawable/listbg"
+                android:layout_below="@+id/separator"
+                />
+
+            <ProgressBar
+                android:id="@+id/sBarepi"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:indeterminateDrawable="@drawable/progresscss"
+                android:translationZ="130dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/emptytextepi"
+                android:background="#25FFFFFF"
+                android:textColor="#fff"
+                android:textSize="16sp"/>
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/refreshbtnepi"
+                android:background="@drawable/ic_refresh"
+                android:layout_below="@+id/emptytextepi"
+                android:layout_marginTop="20dp"
+                />
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#0C0202"
+        android:id="@+id/movietitle"
+        android:text=""
+        android:translationZ="80dp"
+        android:padding="5dp"
+        android:textColor="#fff"
+         android:maxLines="1"
+         android:scrollHorizontally="true"
+        android:ellipsize="end"
+        android:textAlignment="center"
+        android:layout_marginTop="58dp"
+        />
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear"
+        android:layout_below="@+id/movietitle"
+        android:padding="0dp">
+
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/sv"
+            app:use_controller="false"
+            android:layout_width="match_parent"
+            android:layout_height="185dp"
+            android:elevation="90dp"
+            android:textColor="#00000000"
+            app:show_buffering="when_playing"
+            app:ad_marker_color="#00000000"
+            app:use_artwork="true"
+            android:translationZ="90dp"
+            app:scrubber_color="#00000000"
+
+            />
+
+        <com.google.android.exoplayer2.ui.PlayerControlView
+            android:id="@+id/pcv"
+            app:show_timeout="0"
+            android:translationZ="90dp"
+            android:layout_below="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:controller_layout_id="@layout/exo_playback_control_view"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekcon"
+            android:layout_below="@+id/pcv"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:textColor="#fff"
+                android:text="00:00"
+                android:textSize="@dimen/title"
+                android:id="@+id/starttime"
+                />
+            <SeekBar
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/mseekbar"
+                android:layout_weight="1"
+                android:layout_marginTop="2dp"  />
+
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="00:00"
+                android:textSize="@dimen/title"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:id="@+id/endtime"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/morelayout"
+            android:orientation="vertical"
+            android:translationZ="170dp"
+            android:elevation="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/seekcon"
+            android:padding="7dp"
+            android:layout_marginTop="-55dp"
+            android:background="#7C000000">
+
+            <Button
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/favbtn"
+                android:translationZ="100dp"
+                android:background="@drawable/ic_favourite_unchecked"
+                />
+
+            <Button
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/subscribebtn"
+                android:translationZ="100dp"
+                android:background="@drawable/ic_unsubscribed"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/seekcon"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/controlscon"
+            android:orientation="vertical"
+            android:paddingStart="7dp"
+            android:paddingEnd="7dp"
+            android:translationZ="90dp"
+           >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="1dp"
+                android:paddingTop="4dp"
+                android:orientation="horizontal"
+                android:id="@+id/pcon"
+                android:background="#0C0202">
+
+                <com.google.android.exoplayer2.ui.PlayerControlView
+                    android:id="@+id/ppcv"
+                    app:show_timeout="0"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_weight=".5"
+                    android:layout_marginTop="-15dp"
+                    app:controller_layout_id="@layout/exoplayer_play_con"
+                    />
+
+                <Button
+                    android:visibility="gone"
+                    android:layout_height="25dp"
+                    android:layout_width="25dp"
+                    android:background="@drawable/play_btn"
+                    android:id="@+id/playbtn"
+                    android:translationZ="70dp"
+                    android:layout_marginStart="10dp"/>
+
+                <Button
+                    android:visibility="gone"
+                    android:layout_height="25dp"
+                    android:layout_width="25dp"
+                    android:id="@+id/pausebtn"
+                    android:background="@drawable/pause_btn"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/playbtn"
+                    android:translationZ="70dp"
+                    android:layout_marginStart="26dp"/>
+
+                <Button
+                    android:visibility="gone"
+                    android:layout_height="25dp"
+                    android:layout_width="25dp"
+                    android:id="@+id/stopbtn"
+                    android:layout_toEndOf="@+id/pausebtn"
+                    android:background="@drawable/stop_btn"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="26dp"
+                    android:translationZ="70dp"
+                    />
+
+                <Button
+                    android:id="@+id/btnmagnify"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_toEndOf="@+id/stopbtn"
+                    android:layout_columnSpan="1"
+                    android:layout_row="0"
+                    android:background="@drawable/magnify_btn"
+                    android:layout_alignParentTop="true"
+                    android:translationZ="120dp"
+                    android:layout_marginStart="26dp"/>
+
+                <Button
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/infobtn"
+                    android:layout_toEndOf="@+id/btnmagnify"
+                    android:background="@drawable/reveal_btn"
+                    android:layout_alignParentTop="true"
+                    android:translationZ="70dp"
+                    android:layout_marginStart="26dp"/>
+
+                <Button
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/moreoptbtn"
+                    android:layout_toRightOf="@+id/infobtn"
+                    android:background="@drawable/ic_moremenu"
+                    android:layout_alignParentTop="true"
+                    android:translationZ="70dp"
+                    android:layout_marginStart="26dp"/>
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="185dp"
+            android:id="@+id/imgoverlay"
+            android:elevation="150dp"
+            android:translationZ="150dp"
+            android:layout_alignStart="@+id/sv"
+            android:layout_alignTop="@+id/sv"
+            android:src="@drawable/ic_play"
+            android:padding="50dp"
+            android:background="#0F0A0A"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/infocon"
+        android:translationZ="90dp"
+        android:background="#000"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginTop="-0dp"
+        android:layout_below="@+id/linear">
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/mpager"
+            >
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_height="30dp"
+                android:layout_width="match_parent"
+                android:paddingTop="5dp"
+                android:id="@+id/mtablayout"
+                app:tabSelectedTextColor="#BF360C"
+                android:background="@drawable/felixmoon"
+                android:backgroundTint="#DF140404"
+                android:backgroundTintMode="src_atop"
+                app:tabMode="fixed"
+                app:tabMaxWidth="0dp"
+                app:tabPaddingTop="2dp"
+                app:tabPaddingBottom="5dp"
+                app:tabGravity="fill"
+                app:tabBackground="@drawable/tab_layout_selector"
+
+                />
+
+
+        </androidx.viewpager.widget.ViewPager>
+
+
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/footer"
+        android:layout_below="@+id/linear">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#300808"
+            android:text="header"
+            android:id="@+id/txthead"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/maintext"
+            android:layout_below="@+id/txthead"
+            android:layout_alignParentStart="true"
+            android:background="#000"
+            android:paddingTop="7dp"
+            android:layout_marginTop="-10dp"
+            android:text="Explore your favourite movies and series."
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#300808"
+            android:text="header"
+            android:layout_below="@+id/maintext"
+            android:id="@+id/txtfoot"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/pager"
+            android:layout_below="@+id/txtfoot"
+            >
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:id="@+id/tablayout"
+                app:tabSelectedTextColor="#BF360C"
+                android:background="@drawable/felixmoon"
+                android:backgroundTint="#DF140404"
+                android:backgroundTintMode="src_atop"
+                app:tabMode="fixed"
+                app:tabMaxWidth="0dp"
+                app:tabPaddingTop="2dp"
+                app:tabPaddingBottom="5dp"
+                app:tabGravity="fill"
+                app:tabBackground="@drawable/tab_layout_selector"
+
+                />
+
+
+        </androidx.viewpager.widget.ViewPager>
+
+
+    </RelativeLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/conpanel"
+        android:background="#54000000"
+        android:translationZ="170dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Wedding Party"
+            android:textSize="19sp"
+            android:textColor="#fff"
+            android:padding="5dp"
+            android:id="@+id/dtitle"
+            android:layout_alignParentTop="true"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/playpause"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/pause_btn"
+            android:layout_centerInParent="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dseekcon"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:padding="2dp">
+            <com.google.android.exoplayer2.ui.PlayerControlView
+                android:id="@+id/fullpcv"
+                app:show_timeout="0"
+                android:layout_below="@+id/sv"
+                android:layout_width="0dp"
+                android:layout_weight=".85"
+                android:layout_height="wrap_content"
+                app:controller_layout_id="@layout/exo_playback_control_view"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:textColor="#fff"
+                android:text="00:00"
+                android:textSize="@dimen/title"
+                android:visibility="gone"
+                android:id="@+id/dstarttime"
+                />
+            <SeekBar
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/dseekbar"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:layout_marginTop="2dp"  />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="00:00"
+                android:textSize="@dimen/title"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:visibility="gone"
+                android:id="@+id/dendtime"
+                />
+            <Button
+
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                android:background="@drawable/exitmagnify_btn"
+                android:id="@+id/dmagbtn"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/hiddenone"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/hiddentwo"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/selid"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/smid"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/txtsid"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/txttype"/>
+</RelativeLayout>

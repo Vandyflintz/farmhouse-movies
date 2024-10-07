@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/felixmoon"
+    android:backgroundTint="#D50A0404"
+    android:backgroundTintMode="src_atop"
+    android:id="@+id/commentfrag"
+    tools:context=".Comments">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:id="@+id/commentscon"
+        android:layout_above="@+id/commentpanel">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/messagepanel"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:divider="#3F3F3F"
+            android:dividerHeight="0.5dp"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:padding="17dp">
+
+                <TextView
+                    android:id="@+id/txtusercom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/commentbubble"
+                    android:drawableStart="@drawable/ic_comment"
+                    android:drawablePadding="13dp"
+                    android:drawableTint="#00FFFFFF"
+                    android:padding="7dp"
+                    android:paddingStart="2dp"
+                    android:lineHeight="30dp"
+                    android:paddingEnd="7dp"
+                    android:textColor="#fff"
+                        android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="13dp"
+                    android:drawableStart="@drawable/ic_comment" />
+
+                <TextView
+                    android:id="@+id/txtuserdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/txtusercom"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/commentbubble"
+                    android:backgroundTint="#C90A0404"
+                    android:backgroundTintMode="src_atop"
+                    android:drawableStart="@drawable/ic_time"
+                    android:drawablePadding="7dp"
+                    android:padding="7dp"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                     />
+
+                <TextView
+                    android:id="@+id/txtusertime"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/txtuserdate"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/commentbubble"
+                    android:backgroundTint="#C90A0404"
+                    android:backgroundTintMode="src_atop"
+                    android:drawableStart="@drawable/ic_date"
+                    android:drawablePadding="7dp"
+                    android:padding="7dp"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                     />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+
+
+    <ListView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_above="@+id/commentpanel"
+        android:id="@+id/namespanel"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:id="@+id/emptycomment"
+        android:layout_marginBottom="30dp"
+        android:background="#25FFFFFF"
+        android:textColor="#fff"
+        android:textSize="16sp"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/commentpanel"
+        android:padding="10dp"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:background="#C6000000"
+        android:layout_alignParentBottom="true"
+        >
+       <EditText
+           android:layout_width="210dp"
+           android:layout_height="60dp"
+           android:background="@drawable/editbg"
+           android:layout_gravity="fill"
+           android:layout_columnSpan="1"
+           android:layout_rowSpan="2"
+           android:hint="Enter comment here"
+           android:textColorHint="#31000000"
+           android:focusable="false"
+           android:padding="5dp"
+           android:id="@+id/commentinput"
+           android:layout_marginRight="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textAllCaps="false"
+            android:id="@+id/submitComment"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ratingsubmitbtn"
+            android:textColor="#948C8C"
+            android:text="Comment"
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"/>
+
+    </GridLayout>
+
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="invisible"
+    android:id="@+id/hiddeninput"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/hiddennameinput"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/hiddennamerefinput"/>
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImageDialog">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:id="@+id/imguploader"
+            android:background="@drawable/imgviewbg"
+            android:src="@drawable/ic_person_white"
+           />
+
+        <Button
+            android:id="@+id/uploadbtn"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:background="@drawable/btnupload"
+            android:enabled="true"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:layout_marginTop="12dp"
+            android:textAllCaps="false"
+            android:layout_below="@+id/imguploader"
+            android:text="Upload photo" />
+
+        <GridLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/uploadbtn"
+            android:columnCount="2">
+
+            <Button
+                android:background="@drawable/btncss2"
+                android:layout_columnSpan="1"
+                android:layout_marginRight="50dp"
+                android:layout_height="33dp"
+                android:layout_width="wrap_content"
+                android:text="Done"
+                android:id="@+id/donebtn"
+                android:layout_marginTop="14dp"
+                android:textColor="#fff"
+                android:layout_columnWeight="0.5"
+                />
+
+            <Button
+                android:background="@drawable/btncss3"
+                android:layout_columnSpan="1"
+                android:layout_height="33dp"
+                android:layout_width="wrap_content"
+                android:text="Skip"
+                android:id="@+id/skipbtn"
+                android:layout_marginTop="14dp"
+                android:textColor="#fff"
+                android:layout_columnWeight="0.5"
+                />
+
+            <Button
+                android:id="@+id/signupbtn"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/btncss3"
+                android:enabled="true"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:text="Sign Up" />
+
+        </GridLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

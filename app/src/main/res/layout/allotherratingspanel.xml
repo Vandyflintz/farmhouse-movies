@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="#BC000000"
+    android:layout_height="match_parent">
+
+<ImageButton
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:src="@drawable/ic_back"
+    android:background="@drawable/ratingsubmitbtn"
+    android:layout_margin="10dp"
+    android:id="@+id/backbtn"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/backbtn"
+        android:layout_height="fill_parent"
+        android:id="@+id/otherlistratings"
+        />
+
+</RelativeLayout>

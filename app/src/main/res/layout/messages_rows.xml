@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/comment_rows"
+    android:id="@+id/relativecon"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/maincon"
+       >
+
+        <com.vandyflintz.farmhousemovies.CircularImageView
+            android:id="@+id/mthumbnail"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentStart="true"
+            android:scaleType="fitXY"
+            android:layout_marginEnd="8dp"
+            />
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/commentbubble"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:paddingStart="7dp"
+            android:paddingEnd="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/mainconone"
+            android:layout_alignTop="@+id/mthumbnail"
+            android:layout_toEndOf="@+id/mthumbnail"
+            android:layout_marginTop="-2dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/header">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ntitle"
+                    android:lineHeight="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:textColor="#fff"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="15sp"/>
+
+                <Button
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="@drawable/ic_time"
+                    android:layout_toEndOf="@+id/ntitle"
+                    android:translationZ="50dp"
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/timebtn"/>
+
+            </RelativeLayout>
+
+
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header"
+                android:layout_marginTop="5dp"
+                app:flexWrap="wrap"
+                android:id="@+id/commentsec">
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/commentsec"
+                android:layout_centerInParent="true"
+                android:textAlignment="center"
+                android:id="@+id/datecom"
+                android:layout_marginTop="8dp"
+                android:textColor="#E65100"
+                android:gravity="center_horizontal"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#A6E80F"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/datecom"
+                android:textAlignment="center"
+                android:layout_centerInParent="true"
+                android:id="@+id/time"
+                android:textColor="#E65100"
+                android:layout_marginTop="1dp"
+                android:gravity="center_horizontal"/>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/message"
+            android:textSize="15sp"
+            android:textColor="#fff"
+            android:layout_below="@+id/mthumbnail"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

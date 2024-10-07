@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_row_selector"
+    android:padding="8dp">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/sthumbnail"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="8dp"/>
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:drawableStart="@drawable/ic_money"
+        android:id="@+id/paidbtn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="22dp"
+        android:background="#00000000"
+        android:layout_marginEnd="-4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stitle"
+        android:layout_alignTop="@+id/sthumbnail"
+        android:layout_toRightOf="@+id/sthumbnail"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="7dp"
+        android:textColor="#B71C1C"
+        android:textSize="@dimen/title"/>
+
+
+
+
+
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/duration"/>
+
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:textColor="#00000000"
+        android:id="@+id/mfile"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:textColor="#00000000"
+        android:id="@+id/mmid"/>
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:textColor="#00000000"
+        android:id="@+id/mdesc"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:textColor="#00000000"
+        android:id="@+id/mdate"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:textColor="#00000000"
+        android:id="@+id/mpid"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:textColor="#00000000"
+        android:id="@+id/mfid"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:textColor="#00000000"
+        android:id="@+id/hiddentitle"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:textColor="#00000000"
+        android:id="@+id/finalhiddentitle"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:textColor="#00000000"
+        android:id="@+id/mtype"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:textColor="#00000000"
+        android:id="@+id/msid"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:textColor="#00000000"
+        android:id="@+id/mid"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:textColor="#00000000"
+        android:id="@+id/shname"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/mcat"/>
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/mprice"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/msub"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/mexp"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/sesname"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/epname"/>
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/felixmoon"
+    android:backgroundTint="#C6030101"
+    android:backgroundTintMode="src_atop"
+    tools:context=".Season_Sub_Level_One">
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/pager"
+        >
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_height="35dp"
+            android:layout_width="match_parent"
+            android:paddingTop="5dp"
+            android:layout_marginTop="15dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/tablayout"
+            app:tabSelectedTextColor="#BF360C"
+            android:background="@drawable/felixmoon"
+            android:backgroundTint="#DF140404"
+            android:backgroundTintMode="src_atop"
+            app:tabMode="fixed"
+            app:tabMaxWidth="0dp"
+            app:tabPaddingTop="2dp"
+            app:tabPaddingBottom="5dp"
+            app:tabGravity="fill"
+            app:tabBackground="@drawable/tab_layout_selector"
+
+            />
+
+
+    </androidx.viewpager.widget.ViewPager>
+
+</FrameLayout>

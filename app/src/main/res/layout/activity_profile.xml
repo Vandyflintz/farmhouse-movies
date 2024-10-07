@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:id="@+id/header">
+
+
+
+        <com.google.android.material.tabs.TabLayout
+
+            android:layout_height="30dp"
+            android:layout_width="wrap_content"
+            android:paddingTop="5dp"
+            android:id="@+id/mtablayout"
+            app:tabSelectedTextColor="#BF360C"
+            android:background="@drawable/felixmoon"
+            android:backgroundTint="#DF140404"
+            android:backgroundTintMode="src_atop"
+            app:tabMode="fixed"
+            app:tabMaxWidth="0dp"
+            app:tabPaddingTop="2dp"
+            app:tabPaddingBottom="5dp"
+            app:tabGravity="fill"
+            app:tabBackground="@drawable/tab_layout_selector"
+            android:layout_weight=".92"
+            />
+
+        <androidx.appcompat.widget.Toolbar android:layout_height="30dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/toolbar"
+            android:layout_weight=".8"
+            android:layout_toEndOf="@+id/mtablayout"
+            android:paddingEnd="10dp"
+            android:background="@android:color/transparent"/>
+
+
+    </LinearLayout>
+
+    <com.vandyflintz.farmhousemovies.FCViewPager
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/mpager"
+        android:layout_below="@+id/header"
+       />
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

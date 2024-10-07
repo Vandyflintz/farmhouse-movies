@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:text="X"
+        android:textStyle="bold"
+        android:id="@+id/closebtn"
+        android:textAlignment="viewEnd"
+        android:textSize="16sp"
+        android:padding="10dp"/>
+
+    <ListView
+        android:id="@+id/listnames"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:divider="@color/list_divider"
+        android:layout_below="@+id/closebtn"
+        android:dividerHeight="1dp" />
+
+</RelativeLayout>

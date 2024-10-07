@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+   android:columnCount="2"
+    >
+
+    <ImageView
+        android:id="@+id/tabimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/tabtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:background="@drawable/btncss3"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+
+        />
+
+
+</GridLayout>
+

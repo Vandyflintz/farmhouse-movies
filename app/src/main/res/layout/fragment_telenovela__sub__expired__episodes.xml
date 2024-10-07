@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Telenovela_Sub_Expired_Episodes">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView"
+        android:dividerHeight="10dp"
+        android:background="@drawable/listbg"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:id="@+id/emptytext"
+        android:layout_marginBottom="30dp"
+        android:background="#25FFFFFF"
+        android:textColor="#fff"
+        android:textSize="16sp"/>
+
+    <ProgressBar
+        android:id="@+id/sBar"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:indeterminateDrawable="@drawable/progresscss"
+        android:translationZ="130dp"
+        android:visibility="invisible"/>
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/refreshbtn"
+        android:background="@drawable/ic_refresh"
+        />
+
+</RelativeLayout>

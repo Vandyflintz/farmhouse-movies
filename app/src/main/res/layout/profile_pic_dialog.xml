@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:id="@+id/mainprofilecon"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/overallcon">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mainprofile"
+            android:layout_marginTop="150dp"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:id="@+id/uname"
+                android:background="#95220202"/>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="250dp"
+                android:id="@+id/profileimg"
+                android:scaleType="fitXY"
+                android:layout_below="@+id/uname"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profileimg"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:orientation="horizontal"
+                android:background="@drawable/gradientbg">
+
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/msgbtn"
+                    android:layout_marginStart="40dp"
+                    android:background="@drawable/ic_messages"
+                    />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/infobtn"
+                    android:background="@drawable/ic_info"
+                    />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/addfriendbtn"
+                    android:layout_marginEnd="40dp"
+                    android:background="@drawable/ic_add"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ratingsubmitbtn"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:id="@+id/blockbtn"
+                    android:drawableStart="@drawable/ic_block"
+                    android:drawableEnd="@drawable/ic_person_white"
+                    android:paddingStart="2dp"
+                    android:layout_weight=".15"
+                    android:layout_marginEnd="40dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ratingsubmitbtn"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:id="@+id/unblockbtn"
+                    android:drawableStart="@drawable/ic_unblock"
+                    android:drawableEnd="@drawable/ic_person_white"
+                    android:paddingStart="2dp"
+                    android:layout_weight=".15"
+                    android:layout_marginEnd="40dp"
+                    />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ratingsubmitbtn"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:id="@+id/acceptbtn"
+                    android:src="@drawable/ic_accept"
+                    android:layout_marginEnd="40dp"
+                    android:layout_weight=".15"/>
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ratingsubmitbtn"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:id="@+id/pendingbtn"
+                    android:src="@drawable/ic_pending"
+                    android:layout_marginEnd="40dp"
+                    android:layout_weight=".15"/>
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ratingsubmitbtn"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:id="@+id/alreadyfriendsbtn"
+                    android:src="@drawable/ic_accepted"
+                    android:layout_marginEnd="40dp"
+                    android:layout_weight=".15"/>
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ratingsubmitbtn"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:id="@+id/sendreqbtn"
+                    android:src="@drawable/ic_add"
+                    android:layout_marginEnd="40dp"
+                    android:layout_weight=".15"/>
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ratingsubmitbtn"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:src="@drawable/ic_blocked"
+                    android:id="@+id/blockedbtn"
+                    android:layout_marginEnd="40dp"
+                    android:layout_weight=".15"/>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000"
+            android:clickable="true"
+            android:id="@+id/fullscreenrel"
+            android:translationZ="90dp">
+
+
+            <Button
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/backbtn"
+                android:background="@drawable/ic_backarrow"
+                android:layout_marginTop="25dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fullscreenname"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:layout_marginTop="25dp"
+                android:layout_toEndOf="@+id/backbtn"
+                android:layout_marginLeft="10dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:id="@+id/fullscreenprofile"
+                android:scaleType="fitXY"
+                android:layout_marginTop="20dp"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/fullscreenname"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fullscreenprofile"
+                android:layout_centerInParent="true"
+                android:background="@drawable/btnupload"
+                android:id="@+id/updatebtn"
+                android:text="Set as profile picture"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:padding="15dp"
+                android:layout_marginTop="25dp"
+                android:textSize="17sp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

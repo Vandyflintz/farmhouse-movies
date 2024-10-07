@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MainProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/felixmoon"
+        android:backgroundTint="#D50A0404"
+        android:backgroundTintMode="src_atop"
+        android:id="@+id/profilecon"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+
+        >
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:paddingStart="60dp"
+        android:id="@+id/profilefrag">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/ic_home"
+        android:id="@+id/btnhome"/>
+
+        <ImageView
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            android:id="@+id/imguploader"
+            android:background="@drawable/imgviewbg"
+            android:src="@drawable/ic_person_white"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="30dp"
+            android:padding="8dp"
+            />
+
+        <LinearLayout
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imguploader"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/picCon"
+            android:paddingBottom="20dp"
+            android:paddingTop="15dp"
+            android:paddingRight="52dp"
+            android:paddingLeft="52dp"
+            android:layout_marginTop="-70dp"
+            android:background="#8A000000"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/magbtn"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_mag"
+                />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"/>
+
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/cambtn"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_cam"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imguploader"
+            android:layout_marginTop="20dp"
+            android:textSize="24sp"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:id="@+id/username"
+            android:textColor="#F5A417"
+            android:text=""
+            />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/username"
+            android:id="@+id/togglebtn"
+            android:background="@drawable/hide_btn"
+            android:layout_below="@+id/imguploader"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#51FFFFFF"
+            android:layout_below="@+id/username"
+            android:layout_marginTop="8dp"
+            android:id="@+id/headline"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headline"
+            android:id="@+id/relcon"
+            android:padding="8dp"
+            android:background="#A4171616">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_email"
+                android:textColor="#fff"
+                android:textSize="17sp"
+                android:id="@+id/useremail"
+                android:drawablePadding="10dp"
+                android:layout_marginTop="7dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#0CFFFFFF"
+                android:layout_below="@+id/useremail"
+                android:layout_marginTop="8dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_number"
+                android:layout_below="@+id/useremail"
+                android:layout_marginTop="18dp"
+                android:textColor="#fff"
+                android:textSize="17sp"
+                android:drawablePadding="10dp"
+                android:id="@+id/userphone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#0CFFFFFF"
+                android:layout_below="@+id/userphone"
+                android:layout_marginTop="8dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_friends"
+                android:layout_below="@+id/userphone"
+                android:layout_marginTop="18dp"
+                android:textColor="#fff"
+                android:textSize="17sp"
+                android:drawablePadding="10dp"
+                android:visibility="gone"
+                android:id="@+id/friendscount"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#0CFFFFFF"
+                android:layout_below="@+id/friendscount"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_edit"
+                android:layout_below="@+id/friendscount"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="18dp"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:drawablePadding="10dp"
+                android:visibility="gone"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:textAlignment="center"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="Edit Info"
+                android:textStyle="bold"
+                android:background="@drawable/gradientbg"
+                android:id="@+id/editinfotxt"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#51FFFFFF"
+            android:layout_below="@+id/relcon"
+            android:id="@+id/baseline"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/othercon"
+            android:layout_below="@+id/baseline"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".45"
+                android:background="@drawable/ratingsubmitbtn"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:id="@+id/msgbtn"
+                android:src="@drawable/ic_messages"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".40"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ratingsubmitbtn"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:id="@+id/blockbtn"
+                android:drawableStart="@drawable/ic_block"
+                android:drawableEnd="@drawable/ic_person_white"
+                android:paddingStart="2dp"
+                android:layout_weight=".15"
+                android:layout_marginEnd="20dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ratingsubmitbtn"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:id="@+id/unblockbtn"
+                android:drawableStart="@drawable/ic_unblock"
+                android:drawableEnd="@drawable/ic_person_white"
+                android:paddingStart="2dp"
+                android:layout_weight=".15"
+                />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ratingsubmitbtn"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:id="@+id/acceptbtn"
+                android:src="@drawable/ic_accept"
+                android:layout_weight=".15"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ratingsubmitbtn"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:id="@+id/pendingbtn"
+                android:src="@drawable/ic_pending"
+                android:layout_weight=".15"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ratingsubmitbtn"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:id="@+id/alreadyfriendsbtn"
+                android:src="@drawable/ic_accepted"
+                android:layout_weight=".15"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ratingsubmitbtn"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:id="@+id/sendreqbtn"
+                android:src="@drawable/ic_add"
+                android:layout_weight=".15"/>
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ratingsubmitbtn"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:src="@drawable/ic_blocked"
+                android:id="@+id/blockedbtn"
+                android:layout_weight=".15"/>
+
+
+
+        </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/othercon"
+        android:background="@drawable/gradientbg"
+        android:id="@+id/pichead"
+        android:textColor="#fff"
+        android:paddingTop="4dp"
+        android:paddingStart="5dp"
+        android:paddingBottom="4dp"
+        android:textSize="17sp"
+        android:text="Photos"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"/>
+
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:id="@+id/picturespanel"
+            android:layout_below="@+id/pichead"
+            />
+
+    <ProgressBar
+        android:id="@+id/sBar"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:indeterminateDrawable="@drawable/progresscss"
+        android:translationZ="130dp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emptytext"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+
+
+
+
+

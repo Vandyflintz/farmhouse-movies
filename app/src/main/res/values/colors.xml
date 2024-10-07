@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#5C0606</color>
+    <color name="genre">#666666</color>
+    <color name="cwhite">#FFFFFF</color>
+    <color name="corange">#E67700</color>
+    <color name="year">#888888</color>
+    <color name="list_divider">#C8131010</color>
+    <color name="list_row_start_color">#0C0B0B</color>
+    <color name="list_row_end_color">#1F1D1D</color>
+    <color name="list_row_hover_start_color">#ebeef0</color>
+    <color name="list_row_hover_end_color">#ebeef0</color>
+    <color name="otpColorTheme">#dd7a32</color>
+    <color name="pinColorTheme">#dd7a32</color>
+    <color name="tabIndicatorColor">@color/colorPrimary</color>
+    <color name="white">#fff</color>
+    <color name="black_overlay">#FA000000</color>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Description"
+    android:background="@drawable/felixmoon"
+    android:backgroundTint="#D50A0404"
+    android:id="@+id/descfrag"
+    android:backgroundTintMode="src_atop">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/infohead"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:text="27th June 2019"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold|italic"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/infohead"
+        android:paddingTop="10dp"
+        android:paddingBottom="30dp"
+        android:layout_marginTop="40dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/infobody"
+            android:textSize="14sp"
+            android:textColor="#fff"
+            android:text=""
+            android:fontFamily="sans-serif"/>
+    </ScrollView>
+
+</FrameLayout>

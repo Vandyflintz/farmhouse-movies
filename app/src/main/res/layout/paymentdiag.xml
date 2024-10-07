@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:paddingEnd="15dp"
+    android:paddingStart="15dp"
+    android:paddingBottom="5dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginStart="20dp"
+    android:layout_centerInParent="true"
+    android:background="@drawable/roundeddiag"
+    android:paddingTop="5dp">
+
+    <TextView
+        android:layout_marginTop="17dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:drawablePadding="10dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"
+        android:id="@+id/txtreason"/>
+
+    <TextView
+        android:layout_marginTop="17dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_vid"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:layout_below="@+id/txtreason"
+        android:drawablePadding="10dp"
+        android:id="@+id/dmtitle"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:text="Price: Gh¢ "
+        android:layout_below="@+id/dmtitle"
+        android:layout_marginTop="17dp"
+        android:id="@+id/tl"/>
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="18sp"
+        android:id="@+id/mcost"
+        android:layout_below="@+id/dmtitle"
+        android:textColor="#000"
+        android:layout_toEndOf="@+id/tl"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="5dp"
+        android:text="0.00p"
+        />
+
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/gl"
+        android:layout_below="@+id/tl"
+        android:layout_above="@+id/pnote"
+    android:columnCount="2"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:layout_marginTop="17dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="30dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:checked="true"
+                    android:text="@string/accept_card_payments"
+                    android:id="@+id/cardPaymentSwitch"
+                    />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Accept GH Mobile money payments"
+                    android:checked="true"
+                    android:id="@+id/accountGHMobileMoneySwitch"
+                    />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Live"
+                    android:checked="true"
+                    android:visibility="invisible"
+                    android:id="@+id/isLiveSwitch"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:textSize="14sp"
+                    android:id="@+id/emailEt"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="textEmailAddress"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/amount_to_charge_required"
+                    android:id="@+id/amountEt"
+                    android:focusableInTouchMode="false"
+                    android:focusable="false"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/api_key"
+                    android:text=""
+                    android:focusableInTouchMode="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:visibility="gone"
+                    android:id="@+id/apiKeyEt"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/txref_required"
+                    android:id="@+id/txRefEt"
+                    android:text=""
+                    android:focusableInTouchMode="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="merchant Id"
+                    android:id="@+id/merchant_idEt"
+                    android:focusableInTouchMode="false"
+                    android:focusable="false"
+                    android:visibility="gone"
+                    android:inputType="none"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Api Username"
+                    android:id="@+id/api_userEt"
+                    android:visibility="gone"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/redirect_url"
+                    android:id="@+id/d_urlEt"
+                    android:visibility="gone"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/narration"
+                    android:id="@+id/narrationTV"
+                    android:focusableInTouchMode="false"
+                    android:focusable="false"
+                    android:text="Subscription for movies"
+                    android:inputType="none"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/currency_code_e_g_ghs"
+                    android:id="@+id/currencyEt"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/first_name"
+                    android:id="@+id/fNameEt"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/last_name"
+                    android:id="@+id/lnameEt"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start_payment"
+                    android:id="@+id/startPaymentBtn"
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:background="#372E4C"
+                    android:visibility="gone"
+                    android:id="@+id/progressContainer"
+                    android:layout_height="match_parent">
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phonenum"
+        android:inputType="phone"
+        android:hint="Mobile Money Number"
+        android:layout_marginTop="17dp"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/phonenum"
+        android:background="#2C000000"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:ems="20"
+        android:layout_marginTop="17dp"
+        android:id="@+id/spinMoMo"
+        android:textSize="25sp"
+        android:layout_below="@+id/phonenum"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/spinMoMo"
+        android:background="#2C000000"/>
+    <TextView
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_gravity="right"
+        android:id="@+id/hidspin"
+        android:paddingEnd="50dp"
+        android:focusable="true"
+        android:layout_below="@+id/spinMoMo"
+        android:layout_alignEnd="@+id/spinMoMo"
+        android:focusableInTouchMode="true"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etVoucher"
+        android:hint="Voucher Code (Vodafone Users):"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="17dp"
+        android:textSize="18sp"
+        android:layout_below="@+id/spinMoMo"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/etVoucher"
+        android:id="@+id/txtvoucher"
+        android:background="#2C000000"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subscribe"
+        android:id="@+id/sendbtn"
+        android:background="@drawable/ratingsubmitbtn"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:textAllCaps="false"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@+id/etVoucher"
+        android:layout_marginTop="17dp"/>
+</RelativeLayout>
+
+
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_below="@+id/gl"
+        android:id="@+id/rl"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Please wait, you will receive a payment prompt"
+            android:textAlignment="center"
+            android:textSize="19sp"
+            android:textColor="#FF0000"
+            android:id="@+id/pmsg"/>
+
+
+
+        <ProgressBar
+            android:id="@+id/sBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/pmsg"
+            android:layout_marginTop="15dp"
+            android:indeterminateDrawable="@drawable/progresscss"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/pmsg"
+            android:layout_marginTop="20dp"
+            android:id="@+id/donebtn"
+            android:textAllCaps="false"
+            android:text="Close"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:layout_marginEnd="40dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/ratingsubmitbtn"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/pmsg"
+            android:layout_marginTop="20dp"
+            android:id="@+id/retrybtn"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
+            android:textAllCaps="false"
+            android:text="Back"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:background="@drawable/ratingsubmitbtn"
+            />
+
+    </RelativeLayout>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:text=""
+    android:textColor="#000"
+    android:id="@+id/pnote"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="20dp"
+    android:textSize="17sp"
+    android:textAlignment="center"/>
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/mid"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/sid"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/peid"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/amt"/>
+
+</RelativeLayout>

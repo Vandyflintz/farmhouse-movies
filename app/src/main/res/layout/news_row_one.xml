@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:textColor="#B71C1C"
+        android:textSize="@dimen/title"
+        android:textAlignment="center"/>
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/mthumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mthumbnail"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:text="Read More"
+        android:id="@+id/more"
+        android:onClick="expandBtnListener"
+        android:textColor="#B71C1C"
+        android:textSize="@dimen/title"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/mpid"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/mid"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/mdate"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/mpath"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/mdesc"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/mcast"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/mpic"/>
+
+</RelativeLayout>

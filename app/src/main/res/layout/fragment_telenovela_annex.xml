@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:id="@+id/tafrag"
+    android:background="@drawable/felixmoon"
+    android:backgroundTint="#EE0A0404"
+    android:backgroundTintMode="src_atop"
+    tools:context=".TelenovelaAnnex">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/backhead"
+        android:translationZ="70dp"
+        android:elevation="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradientbg"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:id="@+id/titletxt"
+            android:textAllCaps="false"
+            android:paddingTop="3dp"
+            android:textStyle="bold"
+            android:paddingBottom="3dp"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:id="@+id/backbtn"
+            android:text="Back"
+            android:textColor="#fff"
+            android:layout_alignParentEnd="true"
+            android:textAllCaps="false"
+            android:layout_below="@+id/titletxt"
+            android:background="#0A162C"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:text="separator"
+            android:id="@+id/sep"
+            android:layout_alignBottom="@+id/backbtn"
+            android:background="#32000000"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/sep">
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/seriesannexfrag">
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/listmoviesparts"
+                    android:dividerHeight="10dp"
+                    android:background="@drawable/listbg"/>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            >
+
+            <ProgressBar
+                android:id="@+id/sBar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:indeterminateDrawable="@drawable/progresscss"
+                android:translationZ="130dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/emptytext"
+                android:background="#25FFFFFF"
+                android:textColor="#fff"
+                android:textSize="16sp"/>
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/refreshbtn"
+                android:background="@drawable/ic_refresh"
+                android:layout_below="@+id/emptytext"
+                android:layout_marginTop="20dp"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

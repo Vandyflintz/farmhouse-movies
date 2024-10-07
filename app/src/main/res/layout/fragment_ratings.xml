@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/felixmoon"
+    android:backgroundTint="#D50A0404"
+    android:id="@+id/ratingfrag"
+    android:backgroundTintMode="src_atop"
+    tools:context=".Ratings">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/relcon"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/emptyrating"
+            android:layout_marginTop="15dp"
+            android:background="#25FFFFFF"
+            android:textColor="#fff"
+            android:textSize="16sp"/>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/rating_bar"
+            android:progressTint="#0f9d58"
+            android:stepSize="0.5"
+            android:numStars="5"
+            android:rating="0"
+            android:theme="@style/RatingBar"
+            android:isIndicator="false"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/emptyrating"
+            style="@android:style/Widget.Material.Light.RatingBar.Indicator"
+            android:background="#0DFFFFFF"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/rating_bar"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false"
+            android:id="@+id/submitRating"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/ratingsubmitbtn"
+            android:textColor="#948C8C"
+            android:text="Submit"/>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/relcon"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="Underliner"
+        android:textSize="16sp"
+        android:id="@+id/underline"
+        android:background="#31FFFFFF"
+        android:textColor="#fff"
+
+
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratecon"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/relcon"
+        >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/uppercon">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/listratings"
+        android:divider="@color/list_divider"
+        android:dividerHeight="1dp"
+        />
+</RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/list_row_selector"
+    android:padding="8dp"
+    >
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/mthumbnail"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="8dp"/>
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:drawableStart="@drawable/ic_money"
+        android:id="@+id/paidbtn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:background="#00000000"
+        android:layout_marginEnd="-4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mtitle"
+        android:layout_alignTop="@+id/mthumbnail"
+        android:layout_toRightOf="@+id/mthumbnail"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="7dp"
+        android:textColor="#B71C1C"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_marginEnd="30dp"
+        android:scrollHorizontally="true"
+        android:textSize="@dimen/title"/>
+
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mtitle"
+        android:layout_toRightOf="@+id/mthumbnail"
+        android:layout_marginTop="1dip"
+        android:textColor="@color/year"
+        android:layout_marginEnd="30dp"
+        android:textSize="@dimen/year"
+        />
+
+    <Button
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_remove_favourite"
+        android:id="@+id/delvideo"
+        />
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/play_btn"
+        android:id="@+id/playvideo"
+        android:layout_alignParentEnd="true"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/mfile"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/mmid"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/mdesc"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/mdate"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/mpid"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/mfid"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/mtype"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/mid"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/mprice"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/mexpirydate"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/msid"/>
+
+
+</RelativeLayout>

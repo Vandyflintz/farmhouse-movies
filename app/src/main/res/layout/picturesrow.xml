@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:background="#3C000000">
+
+    <com.vandyflintz.farmhousemovies.CircularImageView
+        android:id="@+id/mthumbnail"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"
+        android:scaleType="fitXY"
+        android:layout_marginEnd="8dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mtitle"
+        android:layout_alignTop="@+id/mthumbnail"
+        android:layout_toEndOf="@+id/mthumbnail"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="7dp"
+        android:textColor="#B71C1C"
+        android:textSize="@dimen/title"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+
+        android:layout_height="400dp"
+        android:id="@+id/pictureview"
+        android:layout_below="@+id/mtitle"
+        android:scaleType="fitXY"
+        android:layout_marginTop="7dp"
+        android:adjustViewBounds="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/pictureview"
+        android:padding="7dp"
+        android:background="#632B0606"
+        android:visibility="gone"
+        android:id="@+id/likecompanel">
+
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/likebtn"
+            android:background="@drawable/ic_favourite_unchecked"
+            android:layout_marginStart="10dp"/>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:id="@+id/liketxt"
+            android:text="Vandyflintz and 132 others"
+            android:textColor="#fff"
+            android:layout_weight=".7"/>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/commentscon"
+    android:orientation="horizontal">
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/combtn"
+        android:background="@drawable/ic_comment"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:id="@+id/comtxt"
+        android:textColor="#fff"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:background="@drawable/btncss3"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="200"/>
+
+</LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/likecompanel"
+        android:textColor="@color/corange"
+        android:textSize="15sp"
+        android:background="@drawable/gradientbg"
+        android:paddingTop="4dp"
+        android:paddingStart="5dp"
+        android:paddingBottom="4dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/timetext"/>
+
+
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="invisible"
+        android:id="@+id/nametxt"/>
+</RelativeLayout>

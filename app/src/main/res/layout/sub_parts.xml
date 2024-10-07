@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="@drawable/list_row_selector"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="9dp"
+        android:id="@+id/rel">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/mthumbnail"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/maintitle"
+        android:layout_alignTop="@+id/mthumbnail"
+        android:layout_toRightOf="@+id/mthumbnail"
+        android:layout_marginTop="6dp"
+        android:textColor="#B71C1C"
+        android:layout_marginEnd="40dp"
+        android:maxLines="1"
+        android:text=""
+        android:scrollHorizontally="true"
+        android:ellipsize="end"
+        android:textSize="@dimen/title"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/subtitle"
+        android:layout_alignBottom="@+id/mthumbnail"
+        android:layout_toEndOf="@+id/mthumbnail"
+        android:textColor="#BF360C"
+        android:layout_marginEnd="20dp"
+        android:maxLines="1"
+        android:text=""
+        android:layout_below="@+id/maintitle"
+        android:layout_marginTop="7dp"
+        android:scrollHorizontally="true"
+        android:ellipsize="end"
+        android:textSize="@dimen/title"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/mthumbnail"
+            android:layout_marginTop="3dp"
+            android:background="#40AF2323"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mthumbnail"
+        android:id="@+id/fromtxt"
+        android:textColor="#B71C1C"
+        android:text="Date Subscribed : "
+        android:textSize="@dimen/title"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fromtxt"
+        android:id="@+id/datefromtxt"
+        android:textColor="#BF360C"
+        android:text=""
+        android:textSize="@dimen/title"
+        android:layout_marginTop="7dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/datefromtxt"
+            android:layout_marginTop="3dp"
+            android:background="#40AF2323"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/datefromtxt"
+        android:id="@+id/totxt"
+        android:textColor="#B71C1C"
+        android:text="Date Elapsed : "
+        android:textSize="@dimen/title"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/totxt"
+        android:id="@+id/datetotxt"
+        android:textColor="#BF360C"
+        android:text=""
+        android:textSize="@dimen/title"
+        android:layout_marginTop="7dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/datetotxt"
+            android:layout_marginTop="3dp"
+            android:background="#40AF2323"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/datetotxt"
+            android:id="@+id/timetxt"
+            android:textColor="#B71C1C"
+            android:text="Time Remaining : "
+            android:textSize="@dimen/title"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timetxt"
+            android:id="@+id/timeremainingtxt"
+            android:textColor="#BF360C"
+            android:text=""
+            android:textSize="@dimen/title"
+            android:layout_marginTop="7dp"/>
+
+
+    </RelativeLayout>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="2dp"
+    android:layout_alignParentBottom="true"
+    android:layout_marginTop="15dp"
+    android:background="#3C0808"/>
+
+</RelativeLayout>
